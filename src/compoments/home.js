@@ -22,7 +22,7 @@ const home = () => {
             {
                 bannerList.map((item) =>{
                     return(
-                     <Carousel.Item key={item.id} className="carousel">
+                     <Carousel.Item key={item.order} className="carousel">
                         <img className="d-block w-100" src={item.bannerImageUrl} alt={item.bannerImageAlt} />
                      </Carousel.Item>
                     )
@@ -34,9 +34,9 @@ const home = () => {
       {categoryList.map((item, index)=>{
         if(index % 2 === 0){
           return(
-             <Container className='container-category'>
+             <Container className='container-category' key={item.id}>
                <Col className='col-container-left'>
-                 <img key={item.id} src={item.imageUrl} alt={item.key} />
+                 <img src={item.imageUrl} alt={item.key} />
                </Col>
                <Col className='col-container-right'>
                  <h2>{item.name}</h2>
@@ -47,7 +47,7 @@ const home = () => {
            )
         }else{
          return(
-            <Container className='container-category'>
+            <Container className='container-category' key={item.id}>
               <Col className='reverse-container-left'>
                 <h2>{item.name}</h2>
                 <p>{item.description}</p>
