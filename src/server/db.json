@@ -58,7 +58,7 @@
         },
         {
           "name": "Beverages",
-          "key": "beverages",
+          "key": "beverages-product",
           "description": "Our beverage department will ensure your fridge is always fully stocked. Shop for soda, juice, beer and more. ",
           "enabled": true,
           "order": 3,
@@ -67,7 +67,7 @@
         },
         {
           "name": "Beauty and Hygiene",
-          "key": "beauty-hygiene",
+          "key": "beauty-hygiene-product",
           "description": "Buy beauty and personal care products online in India at best prices.",
           "enabled": true,
           "order": 4,

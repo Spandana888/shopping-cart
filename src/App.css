@@ -54,19 +54,45 @@ hr{
    padding-right:20px;
 }
 
-.icon-container{
-    margin-top: 15px;
-    background-color: #e6e6e6;
-    padding: 10px;
-    display: inline-block;
-}
-
 .header-section-right{
     display: inline-flex;
     justify-content: space-between;
     width: 100%;
 }
 
+.cart-button{
+    background-color: #e6e6e6 !important;
+    margin:10% 0 0;
+}
+
+.modal-content{
+    border:0 !important;
+    height:100vh;
+}
+.modal-close{
+    background-color: #cc0052 !important;
+    color: #ffffff !important;
+    width: 100%;
+    border-radius: 0 !important;
+}
+
+.modal-header{
+   background-color: #3c3c3c;
+   color:#ffffff;
+}
+
+.close{
+    color:#ffffff !important;
+}
+
+.modal-footer{
+    display: block !important;
+    text-align: center;
+}
+
+.full-cart{
+    display: none;
+}
 /* header */
 
 /* Registeration & Login */
@@ -81,7 +107,7 @@ hr{
     width:50%;
 }
 
-.registration-left h1{
+.registration-left h2{
     margin: 30px 0;
 }
 
@@ -110,6 +136,12 @@ hr{
    background-color: #cc0052;
    color:#ffffff;
    padding: 2%;
+}
+
+.register-nav a,
+.register-nav a:active,
+.register-nav a:hover{
+    color:#cc0052;
 }
 
 /* Registeration & Login */
@@ -167,10 +199,11 @@ hr{
 }
 
 .carousel span{
-    background-color: #cac0c0;
+    background-color: #cc0052;
     padding: 1% 5%;
     line-height: 120%;
 }
+
 
 .carousel-indicators{
    display: none !important;
@@ -192,8 +225,12 @@ hr{
     display: none;
 }
 
-.product-link a{
-    margin:10%;
+.product-link button{
+    border:none;
+    width: 100%;
+    text-align: left;
+    padding: 5%;
+    background-color: #e6e6e6 ;
 }
 
 
@@ -215,11 +252,8 @@ hr{
 }
 
 .card-description{
-    /* height: 100px;
     width: 100%;
-    overflow-y: hidden;
-    white-space: break-spaces; */
-    text-align: justify;
+    white-space: break-spaces;
     background-color:#e6e6e6 ;
     padding: 10px;  
 }
@@ -249,6 +283,9 @@ hr{
 }
 
 /* products */
+
+/*footer */
+
 .footer{
     background-color: #e6e6e6;
     padding: 1% 5%;
@@ -258,6 +295,12 @@ hr{
     padding:0;
     margin: 0;
 }
+
+/*footer */
+
+/*popup */
+
+/*popup */
 
 /* Tabelt */
 

@@ -53,7 +53,7 @@ const register = () => {
   return (
     <div className='registration-conatiner'>
       <div className='registration-left'>
-        <h1>Signup</h1>
+        <h2>Signup</h2>
         <p>We do not share your personal details with anyone.</p>
       </div>
       <div className='registration-right'>
@@ -61,28 +61,28 @@ const register = () => {
           <div className="form">
             <div className="form-body">
               <div>
-                 <label htmlFor="text">Firstname</label><br />
-                 <input type="text" placeholder='Firstname' name="firstname" value={formValues.firstname} onChange={handleChange}/>
+                 <label htmlFor="firstname" id="firstnameLabel">Firstname</label><br />
+                 <input id="firstname" type="text" placeholder='Firstname' name="firstname" value={formValues.firstname} onChange={handleChange} aria-labelledby="firstnameLabel"/>
                  <p className='error'>{errors.firstname}</p>
               </div>
               <div>
-                 <label htmlFor="text">Lastname</label><br />
-                 <input type="text" placeholder='Lastname' name="lastname" value={formValues.lastname} onChange={handleChange} />
+                 <label htmlFor="lastname" id="lastnameLabel">Lastname</label><br />
+                 <input id="lastname" type="text" placeholder='Lastname' name="lastname" value={formValues.lastname} onChange={handleChange} aria-labelledby="lastnameLabel" />
                  <p className='error'>{errors.lastname}</p>
               </div>
               <div>
-               <label htmlFor="email">Email</label><br />
-               <input type="text" placeholder='Email' name="email" value={formValues.email} onChange={handleChange} />
+               <label htmlFor="email" id="emailLabel">Email</label><br />
+               <input id="email" type="text" placeholder='Email' name="email" value={formValues.email} onChange={handleChange} aria-labelledby="emailLabel"/>
                 <p className='error'>{errors.email}</p>
             </div>
             <div>
-              <label htmlFor="password">Password</label><br />
-              <input type="password" placeholder='Password' name="password" value={formValues.password} onChange={handleChange} />
+              <label htmlFor="password" id="passwordLabel">Password</label><br />
+              <input id="password" type="password" placeholder='Password' name="password" value={formValues.password} onChange={handleChange}  aria-labelledby="passwordLabel"/>
               <p className='error'>{errors.password}</p>
             </div>
             <div>
-              <label htmlFor="forgotpassword">Confirm Password</label><br />
-              <input type="password" placeholder='Confirm Password' name="confirmpassword" value={formValues.confirmpassword} onChange={handleChange} />
+              <label htmlFor="forgotpassword" id="forgotpasswordLabel">Confirm Password</label><br />
+              <input id="forgotpassword" type="password" placeholder='Confirm Password' name="confirmpassword" value={formValues.confirmpassword} onChange={handleChange}  aria-labelledby="forgotpasswordLabel"/>
               <p className='error'>{errors.confirmpassword}</p>
             </div>
               <button type="submit" className="signup-button">Signup</button>

@@ -40,7 +40,7 @@ const signin = () => {
   return (
     <div className='registration-conatiner'>
     <div className='registration-left'>
-       <h1>Login</h1>
+       <h2>Login</h2>
        <p>Get access to your Orders, Wishlist and Recommendations.</p>
     </div>
     <div className='registration-right'>
@@ -48,13 +48,13 @@ const signin = () => {
     <div className="form">
         <div className="form-body">
             <div>
-               <label htmlFor="email">Email</label><br />
-               <input type="text" placeholder='Email' className={errors.email ? 'error-border' : ''} name="email" value={formValues.email} onChange={handleChange} />
+               <label htmlFor="email" id="emailLabel">Email</label><br />
+               <input id="email" type="text" placeholder='Email' className={errors.email ? 'error-border' : ''} name="email" value={formValues.email} onChange={handleChange} aria-labelledby="emailLabel" />
                 <p className='error'>{errors.email}</p>
             </div>
             <div>
-              <label htmlFor="password">Password</label><br />
-              <input type="password" placeholder='Password' className={errors.password ? 'error-border' : ''} name="password" value={formValues.password} onChange={handleChange} />
+              <label htmlFor="password" id="passwordLabel">Password</label><br />
+              <input id="password" type="password" placeholder='Password' className={errors.password ? 'error-border' : ''} name="password" value={formValues.password} onChange={handleChange} aria-labelledby="emailLabel"/>
               <p className='error'>{errors.password}</p>
             </div>
         </div>
@@ -63,7 +63,7 @@ const signin = () => {
         </div>
         <div className="register-nav">
           <p>Don't have account??</p>
-          <Link to="/register">Register</Link>
+            <Link to="/register" role="link">Register</Link>
         </div>
     </div>  
     </Form>

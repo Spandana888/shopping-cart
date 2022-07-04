@@ -54,7 +54,7 @@ const home = () => {
                 <button>Explore {item.key}</button>
               </Col>
               <Col className='reverse-container-right'>
-                <img src={item.imageUrl} alt="{item.key}" />
+                <img src={item.imageUrl} alt={item.key} />
               </Col>
             </Container>
          )
