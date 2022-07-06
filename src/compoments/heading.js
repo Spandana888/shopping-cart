@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Nav } from 'react-bootstrap';
-import logo from "../static/images/logo_2x.png";
+import logo from "../static/images/logo.png";
 import { BsFillCartFill } from 'react-icons/bs';
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { Link, useLocation } from 'react-router-dom';
