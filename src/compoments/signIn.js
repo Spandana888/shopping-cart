@@ -45,16 +45,16 @@ const signin = () => {
     </div>
     <div className='registration-right'>
     <Form onSubmit={handleSubmit}>
-    <div className="form">
+    <div className="form" role={"form"}>
         <div className="form-body">
             <div>
                <label htmlFor="email" id="emailLabel">Email</label><br />
-               <input id="email" type="text" placeholder='Email' className={errors.email ? 'error-border' : ''} name="email" value={formValues.email} onChange={handleChange} aria-labelledby="emailLabel" />
+               <input id="email" type="email" placeholder='Email' className={errors.email ? 'error-border' : ''} name="email" value={formValues.email} onChange={handleChange} aria-labelledby="emailLabel" />
                 <p className='error'>{errors.email}</p>
             </div>
             <div>
               <label htmlFor="password" id="passwordLabel">Password</label><br />
-              <input id="password" type="password" placeholder='Password' className={errors.password ? 'error-border' : ''} name="password" value={formValues.password} onChange={handleChange} aria-labelledby="emailLabel"/>
+              <input id="password" type="password" placeholder='Password' className={errors.password ? 'error-border' : ''} name="password" value={formValues.password} onChange={handleChange} aria-labelledby="passwordLabel"/>
               <p className='error'>{errors.password}</p>
             </div>
         </div>

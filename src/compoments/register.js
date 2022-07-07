@@ -57,7 +57,7 @@ const register = () => {
         <p>We do not share your personal details with anyone.</p>
       </div>
       <div className='registration-right'>
-        <Form onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit} role={"form"}>
           <div className="form">
             <div className="form-body">
               <div>
@@ -72,17 +72,17 @@ const register = () => {
               </div>
               <div>
                <label htmlFor="email" id="emailLabel">Email</label><br />
-               <input id="email" type="text" placeholder='Email' name="email" value={formValues.email} onChange={handleChange} aria-labelledby="emailLabel"/>
+               <input id="email" type="email" placeholder='Email' name="email" value={formValues.email} onChange={handleChange} aria-labelledby="emailLabel"/>
                 <p className='error'>{errors.email}</p>
             </div>
             <div>
               <label htmlFor="password" id="passwordLabel">Password</label><br />
-              <input id="password" type="password" placeholder='Password' name="password" value={formValues.password} onChange={handleChange}  aria-labelledby="passwordLabel"/>
+              <input id="password" type="password" placeholder='Passwords' name="password" value={formValues.password} onChange={handleChange}  aria-labelledby="passwordLabel"/>
               <p className='error'>{errors.password}</p>
             </div>
             <div>
-              <label htmlFor="forgotpassword" id="forgotpasswordLabel">Confirm Password</label><br />
-              <input id="forgotpassword" type="password" placeholder='Confirm Password' name="confirmpassword" value={formValues.confirmpassword} onChange={handleChange}  aria-labelledby="forgotpasswordLabel"/>
+              <label htmlFor="confirmpassword" id="confirmpasswordLabel">Confirm Password</label><br />
+              <input id="confirmpassword" type="password" placeholder='Confirmpassword' name="confirmpassword" value={formValues.confirmpassword} onChange={handleChange}  aria-labelledby="confirmpasswordLabel"/>
               <p className='error'>{errors.confirmpassword}</p>
             </div>
               <button type="submit" className="signup-button">Signup</button>
