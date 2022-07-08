@@ -4,9 +4,11 @@ import logo from "../static/images/logo.png";
 import { BsFillCartFill } from 'react-icons/bs';
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { Link, useLocation } from 'react-router-dom';
-import Cart from "./cart";
+import Cart from "../compoments/cart";
+import { useCart } from "react-use-cart";
 
 function Heading() {
+  const { totalItems } = useCart();
   const location = useLocation();
   const { pathname } = location;
   const handleNav =() =>{
@@ -36,7 +38,7 @@ function Heading() {
           <Link to="/register" className={pathname === '/register' ? 'activeTab' : ''}>Register</Link>
         </div>
         <div>
-          <button data-testid="cart-button" type="button" className="btn btn-md cart-button" data-toggle="modal" data-target="#myModal"><BsFillCartFill color=" #cc0052"></BsFillCartFill><span> 0 </span> Items</button>
+          <button data-testid="cart-button" type="button" className="btn btn-md cart-button" data-toggle="modal" data-target="#myModal"><BsFillCartFill color=" #cc0052"></BsFillCartFill><span> { totalItems } </span>Items</button>
           <div id="myModal" className="modal fade" role="dialog">
            <div className="modal-dialog">
             <Cart></Cart> 
@@ -55,6 +57,7 @@ function Heading() {
           <Link role="link" to="/products" className={pathname === '/products' ? 'activeTab' : ''}>Products</Link>
           <Link role="link" to="/signIn" className={pathname === '/signIn' ? 'activeTab' : ''}>SignIn</Link>
           <Link role="link" to="/register" className={pathname === '/register' ? 'activeTab' : ''}>Register</Link>
+          <Link role="link" to="/cart" className={pathname === '/cart' ? 'activeTab' : ''}>Cart</Link>
         </div>
         </div>
       </nav>

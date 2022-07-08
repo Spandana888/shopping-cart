@@ -1,17 +1,18 @@
-import react from 'react';
+import React, { useState, useEffect} from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { IoMdArrowDropdown } from 'react-icons/io';
 import axios from 'axios';
+import { CartProvider, useCart } from "react-use-cart";
 
-const products = () => {
-  const [id, setCategory] = react.useState(null);
-  const [productData, setproductData] = react.useState([]);
-  const [category, setCategoryData] = react.useState([]);
-  const buyProduct = () => {
-      
-  }
-    
-  react.useEffect(() => {
+const Products = () => {
+  const [id, setCategory] = useState(null);
+  const [productData, setproductData] = useState([]);
+  const [category, setCategoryData] = useState([]);
+ 
+  // add to cart functionality
+  const { addItem } = useCart();
+   
+  useEffect(() => {
         const fetchData = async () => {
             const categories = await axios.get('http://localhost:8000/categories');
             setCategoryData(categories.data);
@@ -86,7 +87,7 @@ const products = () => {
              <Card.Text className="card-description">{item.description}</Card.Text>
              <div className="price-button">
                <p variant="primary">MRP Rs.{item.price}</p>
-               <Button variant="primary" onClick={buyProduct}>Buy Now</Button>
+               <Button variant="primary" onClick={() => addItem(item)}>Buy Now</Button>
              </div>
             </Card.Body>
           </Card>
@@ -97,4 +98,4 @@ const products = () => {
     </div>
   )};
 
-export default products;
+export default Products;

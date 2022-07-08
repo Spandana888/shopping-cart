@@ -52,7 +52,6 @@ hr{
 }
 .modal-content{
     border:0 !important;
-    height:100vh;
 }
 .modal-close{
     background-color: #cc0052 !important;
@@ -71,7 +70,7 @@ hr{
     display: block !important;
     text-align: center;
 }
-.full-cart{
+.displayNone{
     display: none;
 }
 /* header */
@@ -256,6 +255,42 @@ hr{
     margin: 0;
 }
 /*footer */
+
+/*cart */
+
+.new-item{
+  display: inline-flex;
+  background-color: #ffffff;
+  padding: 3%;
+  margin: 3% 1%;
+  justify-content: space-between;
+}
+.new-item img{
+    width:25%;
+}
+.modal-body{
+    background-color: #e6e6e6;
+}
+.item-count{
+    margin:0 5%;
+}
+.item-count button{
+   background-color: #cc0052;
+   border:none;
+   border-radius: 25%;
+   margin:0 5%;
+}
+.remove-item,
+.remove-item:hover,
+.remove-item:active{
+    cursor: pointer;
+    color:#cc0052;
+}
+.lowest-price{
+  text-align: center;
+}
+
+/*cart */
 
 /* Tabelt */
 @media (min-width: 481px) and (max-width: 900px) {

@@ -1,11 +1,13 @@
-import react from 'react';
+import React, {useState, useEffect} from 'react';
 import { Container, Col, Carousel } from 'react-bootstrap';
 import axios from 'axios';
+import { useNavigate } from "react-router-dom"
 
-const home = () => {
-  const[bannerList, setBanners] = react.useState([]);
-  const[categoryList, setCategories] = react.useState([]);
-  react.useEffect(()=>{
+const Home = () => {
+  const navigate = useNavigate();
+  const[bannerList, setBanners] = useState([]);
+  const[categoryList, setCategories] = useState([]);
+  useEffect(()=>{
     const fetchData = async () =>{
         const banner = await axios.get('http://localhost:8000/banners');
         const category = await axios.get('http://localhost:8000/categories');
@@ -13,7 +15,11 @@ const home = () => {
         setCategories(category.data)
     }
     fetchData();
-  }, [])
+  }, []);
+
+  const showCategory = (e) => {
+     navigate("/products", {state:{ id: e }});
+  };
 
   return (
     <div>
@@ -41,7 +47,7 @@ const home = () => {
                <Col className='col-container-right'>
                  <h2>{item.name}</h2>
                  <p>{item.description}</p>
-                 <button>Explore {item.key}</button>
+                 <button role="button" type="submit" onClick={() => showCategory(item.id)}>Explore {item.key}</button>
                </Col>
               </Container>
            )
@@ -51,7 +57,7 @@ const home = () => {
               <Col className='reverse-container-left'>
                 <h2>{item.name}</h2>
                 <p>{item.description}</p>
-                <button>Explore {item.key}</button>
+                <button role="button" type="submit" onClick={() => showCategory(item.id)}>Explore {item.key}</button>
               </Col>
               <Col className='reverse-container-right'>
                 <img src={item.imageUrl} alt={item.key} />
@@ -63,4 +69,4 @@ const home = () => {
       </div>   
     </div>
 )}
-export default home;
+export default Home;

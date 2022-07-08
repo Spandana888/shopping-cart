@@ -7,10 +7,12 @@ import Cart from "./compoments/cart";
 import Home from "./compoments/home";
 import SignIn from "./compoments/signIn";
 import Register from "./compoments/register";
+import { CartProvider } from "react-use-cart";
 
 function App() {
   return (
     <BrowserRouter className="App">
+      <CartProvider>
       <Heading />
       <div>
         <Routes>
@@ -22,6 +24,7 @@ function App() {
         </Routes>
       </div>
       <Footer />
+     </CartProvider>
     </BrowserRouter>
   );
 }

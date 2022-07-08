@@ -1,12 +1,12 @@
-import react from 'react';
+import React, { useState } from 'react';
 import { Form } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 
-const signin = () => {
+const Signin = () => {
   const initialValue = {  email: "", password: "" };
-  const [formValues, setFormValues] = react.useState(initialValue);
-  const [errors, setErrors] = react.useState(false);
-  const [isSubmit, setIsSubmit] = react.useState(false);
+  const [formValues, setFormValues] = useState(initialValue);
+  const [errors, setErrors] = useState(false);
+  const [isSubmit, setIsSubmit] = useState(false);
   const handleChange = (e) => {
       const { name, value } = e.target;
       setFormValues({ ...formValues, [name]: value });
@@ -72,4 +72,4 @@ const signin = () => {
   );
 }
 
-export default signin
+export default Signin;
