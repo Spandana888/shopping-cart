@@ -2,7 +2,6 @@ import "@testing-library/jest-dom";
 import { screen, render } from "@testing-library/react";
 import SignIn from "../signIn";
 import { BrowserRouter } from "react-router-dom";
-import userEvent from "@testing-library/user-event";
 
 describe("SignIn", () =>{
     test("Should render signIn component", () =>{

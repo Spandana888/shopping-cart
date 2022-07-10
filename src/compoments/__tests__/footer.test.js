@@ -6,5 +6,6 @@ describe("footer", () => {
   test("Footer contains copyright" , () =>{
     render(<Footer/>);
     const footer = screen.getByTestId("footer");
+    expect(footer).not.toBeEmptyDOMElement();
   })
 });

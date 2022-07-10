@@ -1,9 +1,14 @@
 import React from 'react';
 import { useCart } from "react-use-cart";
-import lowestPriceImage  from "../static/images/lowest-price.png"
+import lowestPriceImage  from "../static/images/lowest-price.png";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const { isEmpty, items, totalItems,  cartTotal, updateItemQuantity, removeItem  } = useCart();
+  const navigate = useNavigate();
+  const startShopping = () => {
+    navigate("/products");
+ };
   return (
     <div className="modal-content">
       <div className="modal-header">
@@ -43,7 +48,7 @@ const Cart = () => {
           <p>Your favourite are just a click away</p>
         </div>
         <div className="modal-footer">
-           <button type="button" className="btn modal-close" data-dismiss="modal">Start Shopping</button>
+           <button type="button" onClick={() => startShopping()} className="btn modal-close" data-dismiss="modal">Start Shopping</button>
       </div>
      </div>
     </div>

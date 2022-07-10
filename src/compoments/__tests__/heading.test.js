@@ -1,6 +1,5 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import { BrowserRouter } from "react-router-dom";
 import Header from "../heading";
 
@@ -67,11 +66,4 @@ describe("Header" , () => {
        const cartButton = screen.getByTestId("cart-button");
        expect(cartButton).toBeInTheDocument();
     });
-    test("Header contains active class name when user click on cart button", ()=>{
-        render(
-            <BrowserRouter>
-               <Header />
-            </BrowserRouter>
-        ); 
-     });
 });

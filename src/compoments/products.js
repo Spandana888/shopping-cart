@@ -2,7 +2,7 @@ import React, { useState, useEffect} from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { IoMdArrowDropdown } from 'react-icons/io';
 import axios from 'axios';
-import { CartProvider, useCart } from "react-use-cart";
+import { useCart } from "react-use-cart";
 
 const Products = () => {
   const [id, setCategory] = useState(null);

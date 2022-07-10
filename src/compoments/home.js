@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { Container, Col, Carousel } from 'react-bootstrap';
 import axios from 'axios';
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const navigate = useNavigate();
